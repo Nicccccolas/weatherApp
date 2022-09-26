@@ -6,7 +6,7 @@ const TempCard = ({weather}) => {
     <div className='temperature_card'>
       <img
       className="temperature_img"
-      src={weather && `http://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" />
+      src={weather && `https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" />
       <h2 className='temperature_info'>"{weather?.weather[0].description}"</h2>
     </div>
   )

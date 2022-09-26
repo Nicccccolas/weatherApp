@@ -244,19 +244,16 @@ button {
 }
 
 .card {
-  border: 1px solid green;
-  /* margin: 16px; */
-  display: grid;
-  grid-template-columns: 2 1fr;
-  grid-template-rows: 3;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   max-width: max-content;
-  padding: 1rem 1.5rem;
-  gap: 1.5rem;
+  padding: 1rem 3rem 2rem;
+  gap: 1rem;
   background-color: #fff8;
   box-shadow: .2rem .2rem .3rem rgba(88, 92, 136, 0.65);
 }
@@ -264,10 +261,8 @@ button {
 .principal_card {
   display: flex;
   flex-direction: column;
-  grid-column: span 2;
   text-align: center;
 }
-
 
 .principal-title {
   font-family: 'Bungee Spice', cursive;
@@ -289,7 +284,6 @@ button {
   background-color: rgba(104, 131, 146, 0.399);
   box-shadow: .1rem .1rem .2rem rgba(88, 92, 136, 0.65);
   text-align: center;
-  padding: 10px;
 }
 
 .temperature_card:hover{
@@ -298,22 +292,20 @@ button {
 }
 
 .temperature_img {
-  display: block;
   width: 8rem;
-  transform: translateY(-12%);
+  transform: translateY(-6%);
 }
 
 .temperature_info {
-  font-size: 1.2rem;
-  transform: translateX(5%);
-  transform: translateY(-100%);
+  font-size: 1.8rem;
+  transform: translateY(-70%);
 }
 
 .info_card{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
+  padding: 1rem 0 1rem 2rem;
   background-color: rgba(104, 131, 146, 0.396);
   box-shadow: .1rem .1rem .2rem rgba(88, 92, 136, 0.65);
 }
@@ -327,8 +319,8 @@ button {
   display: grid;
   text-align: justify;
   gap: 3px;
-  font-size: 14px;
-  letter-spacing: .1px;
+  font-size: 1rem;
+  letter-spacing: .5px;
 }
 
 .list-elements {
@@ -339,12 +331,12 @@ button {
 }
 
 .list-title{
-font-size: .9rem;
+font-size: 1.1rem;
 }
 
 .list_span {
   color: #dc6300;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .icon {
@@ -366,7 +358,8 @@ font-size: .9rem;
 }
 
 .button_temp {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
+  transform: translateY(-10%);
 }
 
 .button {

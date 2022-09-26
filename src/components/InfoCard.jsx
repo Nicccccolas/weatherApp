@@ -22,7 +22,7 @@ export const InfoCard = ({ weather }) => {
           <FontAwesomeIcon 
           className='icon'
           icon={faTemperature3} />
-          <h3 className='list-title'><span className='list_span'>Pressure: </span>{weather?.main.pressure}hPa</h3>
+          <h3 className='list-title'><span className='list_span'>Pressure: </span>{weather?.main.pressure} hPa</h3>
         </li>
         <li className='list-elements'>
           <FontAwesomeIcon 

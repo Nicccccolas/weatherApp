@@ -1,4 +1,3 @@
-import { faHourglass2 } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css'

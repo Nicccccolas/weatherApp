@@ -2,6 +2,7 @@ import { faHourglass2 } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css'
+import Loading from './components/Loading';
 import WeatherCard from './components/WeatherCard';
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
             temperature={temperature}
             weather={weather}/>
           :
-          <h2>Loading...</h2>
+          <Loading />
           }
     </div>
   )

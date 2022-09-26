@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+  font-family: 'VT323', monospace;
 }
 
-h1, h2, ul {
+h1, h2, h3, ul {
   margin-top: 0;
   margin-bottom: 0;
-  color: blueviolet;
 }
 
 ul {
@@ -18,21 +18,223 @@ img {
   display: block;
 }
 
-span {
-  color: blueviolet;
-  font-size: .8rem;
-  font-weight: 700;
+button {
+  border: none;
 }
 
-/* .principal-icon {
-width: 4rem;
-} */
+@media(min-width: 768px){
+  .App {
+    background-image: url(https://i.pinimg.com/564x/cf/41/54/cf4154334c36bc1196b11d729c3a77d4.jpg);
+    background-size:contain;
+    background-position-x: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    display: grid;
+    grid-template-columns: 2 1fr;
+    grid-template-rows: 3;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: max-content;
+    padding: 1rem 2rem;
+    gap: 1.5rem;
+    background-color: #fff8;
+    box-shadow: .2rem .2rem .3rem rgba(88, 92, 136, 0.65);
+  }
+  
+  .principal_card {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 2;
+    text-align: center;
+  }
+  
+  
+  .principal-title {
+    font-family: 'Bungee Spice', cursive;
+    padding: 5px;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .principal-city {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  .temperature_card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(104, 131, 146, 0.399);
+    box-shadow: .1rem .1rem .2rem rgba(88, 92, 136, 0.65);
+    text-align: center;
+    padding: 1rem;
+  }
 
+  .temperature_card:hover{
+    background: linear-gradient(180deg, #ec8a0a3f 0%, #a455272c 100%);
+    box-shadow: 2px 2px .2rem rgba(185, 120, 8, 0.494);
+  }
+  
+  .temperature_img {
+    width: 10rem;
+  }
+  
+  .info_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(104, 131, 146, 0.396);
+    box-shadow: .1rem .1rem .2rem rgba(88, 92, 136, 0.65);
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .info_card:hover{
+    background: linear-gradient(180deg, #ec8a0a3f 0%, #a455272c 100%);
+    box-shadow: 2px 2px .2rem rgba(185, 120, 8, 0.494);
+  }
+  
+  .info_list {
+    display: grid;
+    text-align: justify;
+    gap: .3rem;
+    font-size: 14px;
+    letter-spacing: .1px;
+  }
+  
+  .list-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .list-title{
+  font-size: 1rem;
+  letter-spacing: .4px;
+  }
+  
+  .list_span {
+    color: #dc6300;
+    font-size: 1.3rem;
+    letter-spacing: 0;
+  }
+  
+  .icon {
+    color: #c63809;
+  }
+  
+  .button_card {
+    text-align: center;
+    font-family: 'Bungee Spice', cursive;
+    max-width: max-content;
+    grid-column: span 2;
+    /* padding: 5px; */
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .button_temp {
+    font-size: 3rem;
+  }
+  
+  .button {
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    padding: 8px 10px;
+    background: rgb(211, 135, 20);
+    color: azure;
+    position: relative;
+    box-shadow: .1rem .14rem .1rem rgb(0 0 0 / .65 );
+    transition: all ease-in-out;
+  }
+  
+  .button:hover {
+    background: linear-gradient(180deg, #ec8a0a 0%, #a7460eb1 100%);
+    box-shadow: 0 0 rgb(0, 0, 0 / 0);
+  }
+  
+  .button::before{
+    content: '';
+    width: 100%;
+    height: 0.2rem;
+    display: block;
+    position: absolute;
+    background-color: rgb(192, 121, 27);
+    top: 0;
+    left: 0;
+    transition: all .15s ease-in-out;
+  }
+  
+  .button::after{
+    content: '';
+    width: 100%;
+    height: 0.2rem;
+    display: block;
+    position: absolute;
+    background-color: rgb(231, 148, 41);
+    bottom: 0;
+    left: 0;
+    transition: all .1s ease-in-out;
+  }
+  
+  .button:hover:before,
+  .button:hover:after{
+    height: 0;
+  }
+  
+  .loading {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    }
+  
+    .loading-title {
+      font-size: 2.5rem;
+      letter-spacing: .3px;
+      background-color: #fff8;
+      box-shadow: .1rem .1rem .2rem rgba(88, 92, 136, 0.65);
+      padding: 1rem;
+    }
+  
+  .loading-icon {
+    padding: 10px;
+    border: 8px solid #dc6300;
+    border-right-color: #ec8a0a;
+    border-radius: 35px;
+      -webkit-animation: rotate 1.4s infinite linear;
+  }
+  
+  @-webkit-keyframes rotate {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+}
+
+@media(max-width: 768px) {
+  
 .App {
-  background-image: url(https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/styles/bi_876/public/media/image/2020/11/maradona-barco-2148843.jpg?itok=KLvZqkLX);
-  /* text-align: center; */
-  /* background-image: url(https://c1.wallpaperflare.com/preview/478/919/650/air-atmosphere-beautiful-blue.jpg); */
-  background-size: cover;
+  background-image: url(https://i.pinimg.com/564x/cf/41/54/cf4154334c36bc1196b11d729c3a77d4.jpg);
+  background-size:contain;
   background-position-x: center;
   width: 100%;
   min-height: 100vh;
@@ -42,58 +244,207 @@ width: 4rem;
 }
 
 .card {
+  border: 1px solid green;
+  /* margin: 16px; */
   display: grid;
-  grid-template-columns: 2 2fr;
+  grid-template-columns: 2 1fr;
   grid-template-rows: 3;
   position: absolute;
-  top: 20px;
+  top: 2rem;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   max-width: max-content;
-  padding: 2rem;
+  padding: 1rem 1.5rem;
+  gap: 1.5rem;
   background-color: #fff8;
-  /* background-image: url(https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/styles/bi_876/public/media/image/2020/11/maradona-barco-2148843.jpg?itok=KLvZqkLX); */
-  /* text-align: center; */
-  border-radius: .6rem;
-  gap: 1rem;
+  box-shadow: .2rem .2rem .3rem rgba(88, 92, 136, 0.65);
 }
 
 .principal_card {
   display: flex;
   flex-direction: column;
   grid-column: span 2;
-  /* grid-row: 1/1; */
   text-align: center;
-  margin: 10px;
-  gap: 3px;
 }
 
 
 .principal-title {
-  color:black;
-  padding: 10px;
-  border-radius: 10px;
+  font-family: 'Bungee Spice', cursive;
+  padding: 5px;
   font-size: 2rem;
-  font-weight: 700;
-}
-
-.principal-city {
-  font-size: 1.5rem;
   font-weight: 500;
 }
 
-.temperature_card {
-  text-align: center;
-  font-size: 1.5rem;
+.principal-city {
+  font-family: 'Press Start 2P', cursive;
+  font-size: .8rem;
+  font-weight: 300;
 }
 
-.button {
+.temperature_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(104, 131, 146, 0.399);
+  box-shadow: .1rem .1rem .2rem rgba(88, 92, 136, 0.65);
+  text-align: center;
+  padding: 10px;
+}
+
+.temperature_card:hover{
+  background: linear-gradient(180deg, #ec8a0a3f 0%, #a455272c 100%);
+  box-shadow: 2px 2px .2rem rgba(185, 120, 8, 0.494);
+}
+
+.temperature_img {
+  display: block;
+  width: 8rem;
+  transform: translateY(-12%);
+}
+
+.temperature_info {
+  font-size: 1.2rem;
+  transform: translateX(5%);
+  transform: translateY(-100%);
+}
+
+.info_card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(104, 131, 146, 0.396);
+  box-shadow: .1rem .1rem .2rem rgba(88, 92, 136, 0.65);
+}
+
+.info_card:hover{
+  background: linear-gradient(180deg, #ec8a0a3f 0%, #a455272c 100%);
+  box-shadow: 2px 2px .2rem rgba(185, 120, 8, 0.494);
+}
+
+.info_list {
+  display: grid;
+  text-align: justify;
+  gap: 3px;
+  font-size: 14px;
+  letter-spacing: .1px;
+}
+
+.list-elements {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.list-title{
+font-size: .9rem;
+}
+
+.list_span {
+  color: #dc6300;
+  font-size: 1rem;
+}
+
+.icon {
+  color: #c63809;
+}
+
+.button_card {
+  text-align: center;
+  font-family: 'Bungee Spice', cursive;
   max-width: max-content;
   grid-column: span 2;
-  padding: 5px;
+  /* padding: 5px; */
   width: 50%;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   border: none;
+  border-radius: 5px;
+}
+
+.button_temp {
+  font-size: 2.2rem;
+}
+
+.button {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  padding: 5px 7px;
+  background: rgb(211, 135, 20);
+  color: azure;
+  position: relative;
+  box-shadow: .1rem .14rem .1rem rgb(0 0 0 / .65 );
+  transition: all ease-in-out;
+}
+
+.button:hover {
+  background: linear-gradient(180deg, #ec8a0a 0%, #a7460eb1 100%);
+  box-shadow: 0 0 rgb(0, 0, 0 / 0);
+}
+
+.button::before{
+  content: '';
+  width: 100%;
+  height: 0.2rem;
+  display: block;
+  position: absolute;
+  background-color: rgb(192, 121, 27);
+  top: 0;
+  left: 0;
+  transition: all .15s ease-in-out;
+}
+
+.button::after{
+  content: '';
+  width: 100%;
+  height: 0.2rem;
+  display: block;
+  position: absolute;
+  background-color: rgb(231, 148, 41);
+  bottom: 0;
+  left: 0;
+  transition: all .1s ease-in-out;
+}
+
+.button:hover:before,
+.button:hover:after{
+  height: 0;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    top: 2rem;
+  left: 50%;
+  transform: translateY(-150%);
+  align-items: center;
+  gap: 1rem;
+  }
+
+  .loading-title {
+    font-size: 2.5rem;
+    letter-spacing: .3px;
+    background-color: #fff8;
+    box-shadow: .1rem .1rem .2rem rgba(88, 92, 136, 0.65);
+    padding: 1rem;
+  }
+
+.loading-icon {
+  padding: 10px;
+  border: 8px solid #dc6300;
+  border-right-color: #ec8a0a;
+  border-radius: 35px;
+    -webkit-animation: rotate 1.4s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
 }
